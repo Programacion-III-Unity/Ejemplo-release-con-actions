@@ -24,7 +24,7 @@ jobs:
       - name: Build For Windows 64 bits
         run: Start-Process -Wait 'C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe' -ArgumentList "-nographics -batchmode -projectPath $env:PROJECT_PATH -executeMethod $env:BUILD_METHOD_WIN64 -quit"
       - name: create zip 
-        run: Compress-Archive -Path build\$env:projectVersion\Win64 build\release.zip
+        run: Compress-Archive -Path .\\build\\$env:projectVersion\\Win64 build\release.zip
       - name: Create Release
         uses: actions/create-release@v1
         id: create_release
