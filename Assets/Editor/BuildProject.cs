@@ -12,7 +12,7 @@ public class BuildProject : MonoBehaviour
     {
         string buildPath = ".\\build\\" + version + "\\Win64\\" + gameName + ".exe";
         BuildPipeline.BuildPlayer(
-            new string[] { "Assets\\Scenes\\Gameplay\\GamePlay.unity" },
+            new string[] { "Assets\\Scenes\\SampleScene.unity" },
             buildPath,
             BuildTarget.StandaloneWindows64,
             BuildOptions.None
@@ -22,7 +22,7 @@ public class BuildProject : MonoBehaviour
     {
         string buildPath = ".\\build\\" + version + "\\Win32\\" + gameName + ".exe";
         BuildPipeline.BuildPlayer(
-            new string[] { "Assets\\Scenes\\Gameplay\\GamePlay.unity" },
+            new string[] { "Assets\\Scenes\\SampleScene.unity" },
             buildPath,
             BuildTarget.StandaloneWindows,
             BuildOptions.None
